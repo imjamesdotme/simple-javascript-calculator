@@ -1,0 +1,20 @@
+# Packages #
+############
+*.zip
+*.codekit
+*.sass-cache
+bower_components
+
+# Logs and databases #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+
+# Other #
+######################
+codepen-version.js
