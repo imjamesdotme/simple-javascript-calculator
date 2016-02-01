@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    title Simple Javascript Calculator | I'm James
+    link(href="main.css" rel="stylesheet")
+    link(href='https://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css')
+    meta(name="theme-color" content="#29B6F6")
+
+  body
+    #calculator
+      #tape-content
+        span No calculations have been made.
+        ul#tape-list
+        button#clear-tape Clear
+      button#tape
+      
+      #top
+        button#clear C
+        #display
+          span 0
+
+      #keys
+        button.number 1
+        button.number 2
+        button.number 3
+        button.operator /
+        button.number 4
+        button.number 5
+        button.number 6
+        button.operator *
+        button.number 7
+        button.number 8
+        button.number 9
+        button.operator -
+        button.number 0
+        button#decimal .
+        button#equals =
+        button.operator +
+
+  script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js")
+  script(src="calculator.js" type="text/javascript")

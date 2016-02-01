@@ -1,0 +1,167 @@
+$white: #ffffff;
+$purple: #7E57C2;
+$blue: #29B6F6;
+
+html, body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: $white;
+  overflow: hidden;
+  @include background(linear-gradient($blue, $purple) left repeat);
+}
+
+#calculator {
+  height: 100%;
+}
+
+#top {
+  height: 20%;
+}
+
+#clear {
+  height: 100%;
+  width: 25%;
+  display: block;
+  float: left;
+  border-top: none;
+}
+
+#display {
+  height: 100%;
+  width: 75%;
+  display: block;
+  position: relative;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#display span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  @include transform(translateY(-50%));
+}
+
+#keys {
+  height: 80%;
+}
+
+#keys button {
+  height: 25%;
+  width: 25%;
+  display: block;
+  float: left;
+  margin-right: 0;
+}
+
+button {
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-bottom: none;
+  border-left: none;
+  background-color: transparent;
+  @include transition(all 0.3s ease-in-out);
+
+  &:hover {
+    background:rgba(255,255,255,0.3);
+  }
+
+  &:nth-child(4n) {
+    border-right: none;
+  }
+}
+
+// Tape 'hamburger' button
+#tape {
+  position: absolute;
+  right: 0;
+  margin: 0 10px 0 0;
+  border: 0;
+  display: inline-block;
+  z-index: 2;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  @include transition(all 0.3s ease-in-out);
+
+  &:before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: $white;
+  }
+
+  &:hover:before {
+    background-color: $white;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-top: 7px;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: $white;
+  }
+
+  &:hover:after {
+    background-color: $white;
+  }
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+#tape.active {
+
+  &:before {
+    @include transform(rotate(45deg));
+  }
+
+  &:after {
+    margin-top: 0;
+    @include transform(rotate(-45deg));
+  }
+}
+
+// Tape
+#tape-content {
+  display: none;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+ul#tape-list {
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+button#clear-tape {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 1px solid $white;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

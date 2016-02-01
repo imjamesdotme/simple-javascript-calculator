@@ -1,0 +1,28 @@
+{
+  "name": "Simple Javascript Calculator",
+  "authors": [
+    "James L <hello@imjames.me>"
+  ],
+  "description": "Simple Javascript Calculator with tape.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "javascript",
+    "calculator"
+  ],
+  "license": "MIT",
+  "homepage": "http://imjames.me",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.6",
+    "jquery": "~2.2.0",
+    "normalize-scss": "~3.0.3"
+  }
+}
