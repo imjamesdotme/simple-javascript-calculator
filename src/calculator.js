@@ -25,7 +25,7 @@ $(document).ready(function () {
     num1 = $('#display span').text();
     num1 = parseFloat(num1);
 
-    // Clear display - the
+    // Clear the display
     displayNumbers = [];
 
     operator = $(this).text();
